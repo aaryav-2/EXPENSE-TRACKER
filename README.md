@@ -1,18 +1,17 @@
 # EXPENSE-TRACKER
 
-    #include <stdio.h>
+     #include <stdio.h>
 
-    float sumExpenses(float *expenses, int n)
-    {
+     float sumExpenses(float *expenses, int n)
+     {
    
     if (n == 0)
         return 0;
     
-    return expenses[n - 1] + sumExpenses(expenses, n - 1);
-        }
-
-        void main() 
-         {
+     return expenses[n ] + sumExpenses(expenses, n-1 );
+    }
+          void main()
+    {
     int n;
     float total = 0;
 
@@ -22,13 +21,14 @@
     float expenses[n];  
 
     printf("\nEnter the amount for each expense:\n");
-    for (int i = 1; i<=n; i++) {
+    for (int i = 1; i<=n; i++) 
+    {
         printf("Expense %d: ", i );
         scanf("%f", &expenses[i]);
     }
 
     total = sumExpenses(expenses, n);
 
-    printf("\nTotal monthly expenses = %.2f\n", total);
+    printf("\nTotal monthly expenses = %f\n", total);
 
-     }
+    }
